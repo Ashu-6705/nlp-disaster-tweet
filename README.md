@@ -69,7 +69,7 @@ The consequence is **contextual embeddings**, which directly resolve Rung 2's fi
 
 This was the most instructive result in the project.
 
-A large fraction of this task is decided by **which words appear** — `earthquake`, `evacuate`, `debris` are close to decisive on their own. TF-IDF models exactly that, and does it near-optimally. The BiLSTM's additional capability is modeling word *order* and *relationships*, but on short tweets with strong keyword signal, order rarely determines the label. So its advantage had little to exploit, while it still paid the full cost of learning sequential structure from scratch over static, context-blind embeddings.
+A large fraction of this task is decided by **which words appear** — `earthquake`, ``evacuate`, `debris` are close to decisive on their own. TF-IDF models exactly that, and does it near-optimally. The BiLSTM's additional capability is modeling word *order* and *relationships*, but on short tweets with strong keyword signal, order rarely determines the label. So its advantage had little to exploit, while it still paid the full cost of learning sequential structure from scratch over static, context-blind embeddings.
 
 **The takeaway: model complexity only helps when the task actually contains the structure that complexity captures.** Otherwise you are paying for capability you cannot use.
 
